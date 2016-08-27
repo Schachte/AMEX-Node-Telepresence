@@ -174,10 +174,17 @@
                   </div>
                 </li>
               </ul>
+              <div ng-app="myApp" ng-controller="formCtrl">
+                <form novalidate>
+                  <textarea class="widther" rows="4" cols="250" ng-model="chat.message">Please type your community message here.</textarea>
+                  <button ng-click="sendChat()">Send Chat</button>
+                </form>
+              </div>
             </div>
             <!-- /widget-content -->
           </div>
           <!-- /widget -->
+
         </div>
         <!-- /span6 -->
         <div class="span6">

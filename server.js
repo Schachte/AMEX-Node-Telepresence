@@ -68,7 +68,15 @@ app.get('/getStats', function(req, res) {
 */
 app.post('/storeMessage', function(req, res) {
 
-  
+  console.log(req.body.chat);
+  var chatMsg = new chatData({ timestamp: req.body.timestamp, message: req.body.chat, name: req.body.name});
+  chatMsg.save(function(err) {
+    if (err) {
+      console.log("We have a problem")
+    } else {
+      console.log("Data saved into the database successfully!");
+    }
+  })
 
 });
 
