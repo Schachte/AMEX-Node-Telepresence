@@ -72,7 +72,7 @@ textarea {
 .navbar-inner {
 	padding: 7px 0;
 
-	background: #00ba8b !important;
+	background: #0396D6 !important;
 
 	-moz-border-radius: 0;
 	-webkit-border-radius: 0;
@@ -1105,7 +1105,7 @@ width: 11px;}
 	height: 250px;
 }
 
-.dropdown-menu li>a:hover, .dropdown-menu .active>a, .dropdown-menu .active>a:hover { background:#00ba8b;}
+.dropdown-menu li>a:hover, .dropdown-menu .active>a, .dropdown-menu .active>a:hover { background:#0396D6;}
 
 .accordion-heading { background:#e5e5e5;  }
 .accordion-heading a { color:#545454; text-decoration:none; font-weight:bold; }
@@ -1272,9 +1272,18 @@ color: #333;
 	}
 }
 
+#map {
+	height: 100%;
+	width: 100%;
+}
 
 
+#map_display {
 
+	width: 100%;
+	margin: auto;
+	margin-bottom: 20px;
+}
 
 
 /*------------------------------------------------------------------
