@@ -9,6 +9,7 @@ var schemas = require('./schemas');
 
 var routes_stats = require('./components/stats');
 var routes_chat = require('./components/chat');
+var routes_location = require('./components/location');
 
 var app = express();
 
@@ -24,6 +25,9 @@ var chatData = schemas.chatData;
 
 //Grabs the updated statistics for the robots
 app.get('/getStats', routes_stats.statistics);
+
+//Grabs the updated statistics for the robots
+app.get('/getRobotLocation', routes_location.locationData);
 
 //Stores chat data from front-end form to DB
 app.post('/storeMessage', routes_chat.storeChatData);

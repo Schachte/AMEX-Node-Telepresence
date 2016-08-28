@@ -20,6 +20,15 @@ var chatSchema = new Schema({
   name: String,
 }, {collection: 'chat'});
 
+
+var robotLocationSchema = new Schema({
+  lat: Number,
+  long: Number,
+  name: String
+
+}, {collection: 'location'});
+
 //Assign the schema
 exports.statData = mongoose.model('statData', robotStatisticsSchema);
 exports.chatData = mongoose.model('chatData', chatSchema);
+exports.locationData = mongoose.model('locationData', robotLocationSchema);
