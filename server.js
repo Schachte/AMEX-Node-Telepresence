@@ -32,7 +32,7 @@ var robotStatisticsSchema = new Schema({
 var chatSchema = new Schema({
   timestamp: String,
   message: String,
-  name: String,
+  name: String
 }, {collection: 'chat'});
 
 //Assign the schema
@@ -60,6 +60,23 @@ app.get('/getStats', function(req, res) {
 
     //Send the queries JSON from DB back to Angular controller
     res.json(statJSONData);
+  });
+});
+
+app.get('/getChats', function(req, res) {
+  waterfall([
+    function(callback){
+
+      //Pull the data from remote mongo server
+      mongoose.model('chatData').find(function(err, serverDbData) {
+        chatsData = serverDbData;
+        callback(null, chatsData, 'done');
+      })
+    },
+  ], function (err, chatJSONData, result) {
+
+    //Send the queries JSON from DB back to Angular controller
+    res.json(chatJSONData);
   });
 });
 

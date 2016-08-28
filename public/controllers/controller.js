@@ -17,26 +17,9 @@ app.controller('mainStatistics', function($scope, $http) {
             appointments: res[0].appointments,
             location_count: res[0].locations
          }
-
          //Get JSON response from server of live DB statistics
          $scope.stats = stats;
        });
        setTimeout(getStatData, 10000);
    }
-});
-
-//Handle form requests for persisting chat data
-app.controller('formCtrl', function($scope, $http) {
-  $scope.sendChat = function() {
-      var user_text = {
-        chat: $(".widther").val(),
-        timestamp: Date.now(),
-        name: "TEMP_NAME"
-      }
-      console.log("Send chat called succcessfully!");
-
-      $http.post('/storeMessage', user_text).success(function(res) {
-        console.log("Called backend function successfully!");
-      });
-  };
 });
