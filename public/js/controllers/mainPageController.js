@@ -1,9 +1,10 @@
 
 //Global app variable to represent the application
-var app = angular.module('myApp', []);
+var app = angular.module('myApp');
 
 app.controller('mainStatistics', function($scope, $http) {
 
+    $scope.message = "main stats test complete";
      getStatData();
 
      function getStatData() {
