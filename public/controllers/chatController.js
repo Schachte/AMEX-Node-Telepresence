@@ -26,6 +26,6 @@ app.controller('chatMessages', function($scope, $http) {
          //Get JSON response from server of live DB statistics
          $scope.chats = res;
        });
-       setTimeout(getChatData, 10000);
+      //  setTimeout(getChatData, 10000);
    }
 });
