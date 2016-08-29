@@ -304,7 +304,7 @@
 <script src="js/base.js"></script>
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script src="js/map-update.js"></script>
-
+<script src="https://cdn.socket.io/socket.io-1.3.7.js"></script>
 <!-- Control the web socket communication functions -->
 <script>
   var socket = io();
@@ -316,10 +316,6 @@
     document.getElementById("locations").innerHTML = msg.locations;
   });
 </script>
-
-
-
-
 
 </body>
 </html>
