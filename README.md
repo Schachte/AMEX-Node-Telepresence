@@ -1,4 +1,4 @@
-Node Version of AMEX Telepresence Robots Capstone
+Node Version of AMEX Telepresence Robots
 
 #Node and Mongo<br>
 Make sure node is installed as well as MongoDB
