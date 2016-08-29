@@ -51,9 +51,15 @@ app.get('/getRobotLocation', routes_location.locationData);
 //Stores chat data from front-end form to DB
 app.post('/storeMessage', routes_chat.storeChatData);
 
+app.get('*', function(req, res) {
+  res.sendfile('./public/index.html'); // load our public/index.html file if any url other than those used for the API are requested
+});
+
 /**********************************
 Run the Server
 ***********************************/
 http.listen(app.get('port'), function(){
   console.log('listening on *:' + app.get('port'));
+
+
 });
