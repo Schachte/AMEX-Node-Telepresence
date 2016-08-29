@@ -39,8 +39,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 /**********************************
 REST API Endpoints
 ***********************************/
+
 //Grabs the updated statistics for the robots
-app.get('/getStats', routes_stats.statistics);
+setInterval( function() {
+  routes_stats.statUpdates(io);
+}, 1000);
 
 //Grabs the updated statistics for the robots
 app.get('/getRobotLocation', routes_location.locationData);
